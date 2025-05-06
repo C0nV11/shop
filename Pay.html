@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html  lang="ru">
+
+
+<head>
+
+
+    <meta charset="utf-8">
+    <title>Dr.Vape</title>
+    <meta name="description" content="Vape-shop">
+    <meta name="author" content="C0nV11">
+    <meta name="geo.region" content="BY">
+ 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+
+
+   <header id="header" class="row">   
+
+
+
+<h2 class="count">Итого: ZL</h2>
+  
+	   	<nav id="header-nav-wrap">
+			<ul class="header-main-nav">
+				<li class="current"><a  href="index.html" title="home">Главная</a></li>
+            
+				<li><a   href="#pricing" title="products">Вся продукция</a></li>
+				<li><a   href="liquid.html" title="testimonials">Жидкости для вейпов</a></li>
+				<li><a   href="vapes.html" title="vapes">Вейпы</a></li>	
+                <li><a   href="consumables.html" title="consumables">Расходники</a></li>
+                <li><a   href="disposables.html" title="disposables">Одноразки</a></li>
+                <li><a   href="other.html" title="other">Другое</a></li>
+			</ul>
+		</nav>
+
+		<a class="header-menu-toggle" href="#"><span>Меню</span></a>    	
+   	
+   </header> 
+
+   <div class="products-grid">
+    
+         
+    <div class="product-card-pay">
+       
+        <img src="https://via.placeholder.com/200x180" class="product-image" alt="Колонка">
+        <h3 class="product-title">CHASER Bali Tripel Shot 30ml</h3>
+        <div class="product-features">
+            <span class="feature-item">
+               </i> E.LIQUID
+         
+        </div>
+        <div class="product-price">65,99 ZL</div>
+        <div class="quantity-control">
+            <button class="qty-btn minus">-</button>
+            <input type="number" class="qty-input" value="1" min="1" step="1">
+            <button class="qty-btn plus">+</button>
+        </div>
+    </div>
+
+
+    
+ 
+   
+
+
+
+    
+
+    <div id="preloader"> 
+    	<div id="loader"></div>
+    </div>  
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+<script>
+     function translatePage() {
+        var userLang = navigator.language || navigator.userLanguage; 
+        if (userLang.startsWith("en")) { 
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+            document.body.appendChild(script);
+        }
+    }
+
+        window.onload = function() {
+            if(!localStorage.getItem('ageVerified')) {
+                document.getElementById('age-verification').style.display = 'flex';
+            }
+        };
+        
+        function confirmAge() {
+            localStorage.setItem('ageVerified', 'true');
+            document.getElementById('age-verification').style.display = 'none';
+        }
+        
+        function rejectAge() {
+            window.location.href = 'https://www.google.com'; 
+        }
+        
+       
+        document.getElementById('age-verification').addEventListener('click', function(e) {
+            if(e.target === this) e.preventDefault();
+        });
+        </script>
+    <div id="age-verification" class="age-modal">
+        <div class="age-modal-content">
+            <div class="age-modal-header">
+                <h2>Вам уже исполнилось 18 лет?</h2>
+            </div>
+            <div class="age-modal-body">
+                <p>Содержание этого сайта предназначено только для лиц, достигших совершеннолетия.</p>
+            </div>
+            <div class="age-modal-buttons">
+                <button onclick="confirmAge()" class="age-btn confirm-btn">Да, мне есть 18</button>
+                <button onclick="rejectAge()" class="age-btn reject-btn">Нет, я младше</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
